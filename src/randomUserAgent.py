@@ -1,7 +1,7 @@
 import random
 
 
-def random_user_agent(seed=None):
+def user_agent_random(seed=None):
     """
     Retorna un 'user_agent' aleatorio
     """

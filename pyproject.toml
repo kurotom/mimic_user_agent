@@ -1,5 +1,5 @@
 [project]
-name = "random_user_agent"
+name = "user_agent_random"
 version = "0.0.1"
 authors = [
   { name="kurotom", email="author@example.com" },
