@@ -1,4 +1,3 @@
 */__pycache__
 dist/
-src/user_agent_random.egg-info/
-
+src/mimic_user_agent.egg-info/
