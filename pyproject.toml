@@ -1,5 +1,5 @@
 [project]
-name = "user_agent_random"
+name = "mimic_user_agent"
 version = "0.0.1"
 authors = [
   { name="kurotom", email="author@example.com" },
@@ -14,5 +14,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/kurotom/random_user_agent"
-"Bug Tracker" = "https://github.com/kurotom/random_user_agent/issues"
+"Homepage" = "https://github.com/kurotom/mimic_user_agent"
+"Bug Tracker" = "https://github.com/kurotom/mimic_user_agent/issues"
