@@ -2,7 +2,7 @@
 name = "random_user_agent"
 version = "0.0.1"
 authors = [
-  { name="Kurotom", email="author@example.com" },
+  { name="kurotom", email="author@example.com" },
 ]
 description = "simple user-agent generator."
 readme = "README.md"
@@ -14,5 +14,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/pypa/sampleproject"
-"Bug Tracker" = "https://github.com/pypa/sampleproject/issues"
+"Homepage" = "https://github.com/kurotom/random_user_agent"
+"Bug Tracker" = "https://github.com/kurotom/random_user_agent/issues"
