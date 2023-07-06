@@ -1,1 +1,5 @@
 */__pycache__
+dist/
+src/random_user_agent.egg-info/
+
+
