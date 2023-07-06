@@ -5,7 +5,7 @@ Funcion que retorna un 'user-agent' falso aleatorio o estático.
 # Uso
 
 ```python
->>> from mimicUserAgent import mimic_user_agent
+>>> from mimic_user_agent.mimicUserAgent import mimic_user_agent
 >>> mimic_user_agent()
 'Mozilla/5.0 (X11; Linux; i686 on x86_64; rv:112.0) Gecko/20100101 Firefox/112.0'
 >>>
