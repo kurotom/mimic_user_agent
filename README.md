@@ -20,7 +20,7 @@ Recibe un parámetro `int` para el uso de una *seed*, por defecto es `None`.
 
 **Aclaración:**
 
-Por ahora, solamente muestra usuarios Firefox.
+Por ahora, solamente genera user-agent Firefox.
 
 ---
 
