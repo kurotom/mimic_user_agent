@@ -1,22 +1,15 @@
-[build-system]
-requires = ["setuptools>=67.0"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "mimic_user_agent"
-version = "0.1.1"
-authors = [
-  { name="kurotom", email="author@example.com" },
-]
-description = "simple user-agent generator."
+[tool.poetry]
+name = "mimic-user-agent"
+version = "0.1.0"
+description = "Simple user-agent generator."
+authors = ["kurotom <55354389+kurotom@users.noreply.github.com>"]
 readme = "README.md"
-requires-python = ">=3.7"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]
+packages = [{include = "mimic_user_agent"}]
 
-[project.urls]
-"Homepage" = "https://github.com/kurotom/mimic_user_agent"
-"Bug Tracker" = "https://github.com/kurotom/mimic_user_agent/issues"
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

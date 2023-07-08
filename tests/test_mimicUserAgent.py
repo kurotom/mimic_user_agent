@@ -1,5 +1,5 @@
 import unittest
-from src.mimic_user_agent.mimicUserAgent import mimic_user_agent as mua
+from mimic_user_agent.mimicUserAgent import mimic_user_agent as mua
 
 
 class TestRandomUserAgent(unittest.TestCase):
