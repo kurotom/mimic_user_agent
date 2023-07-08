@@ -6,6 +6,8 @@ authors = ["kurotom <55354389+kurotom@users.noreply.github.com>"]
 license = "LGPL-3.0-or-later"
 readme = "README.md"
 packages = [{include = "mimic_useragent"}]
+repository = "https://github.com/kurotom/mimic_useragent"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -14,3 +16,7 @@ python = "^3.10"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/kurotom/mimic_useragent/issues"
