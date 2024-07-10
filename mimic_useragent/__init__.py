@@ -1,25 +1,26 @@
+# -*- coding: utf-8 -*-
 """
-Mimic user agent, permite generar un agente de usuario aleatorio o fijo segun
-una seed dada.
+Allows to generate a random or fixed user agent according to a given *seed*.
+
+Firefox only.
 """
 
 import random
 
 
-def mimic_user_agent(seed=None):
+def mimic_user_agent(seed=None) -> str:
     """
-    Retorna un 'user_agent' aleatorio
+    Returns 'user-agent' string.
 
-    Argumentos:
-        seed = int or None (default).
+    Args:
+        seed : int or None (default).
 
-    Returns
-        Retorna string con user agent aleatorio.
+    Returns:
+        str : returns random user-agent strings.
     """
 
     OS_PLATFORM = {
         "win": (
-            "Windows NT 5.1",  # Windows XP
             "Windows NT 6.1",  # Windows 7
             "Windows NT 6.2",  # Windows 8
             "Windows NT 6.3",  # Windows 8.1
@@ -43,34 +44,25 @@ def mimic_user_agent(seed=None):
         )
     }
 
-    USER_AGENT = (
-        'Mozilla/5.0 (None; rv:103.0) Gecko/20100101 Firefox/103.0',
-        'Mozilla/5.0 (None; rv:104.0) Gecko/20100101 Firefox/104.0',
-        'Mozilla/5.0 (None; rv:105.0) Gecko/20100101 Firefox/105.0',
-        'Mozilla/5.0 (None; rv:106.0) Gecko/20100101 Firefox/106.0',
-        'Mozilla/5.0 (None; rv:107.0) Gecko/20100101 Firefox/107.0',
-        'Mozilla/5.0 (None; rv:108.0) Gecko/20100101 Firefox/108.0',
-        'Mozilla/5.0 (None; rv:109.0) Gecko/20100101 Firefox/109.0',
-        'Mozilla/5.0 (None; rv:110.0) Gecko/20100101 Firefox/110.0',
-        'Mozilla/5.0 (None; rv:111.0) Gecko/20100101 Firefox/111.0',
-        'Mozilla/5.0 (None; rv:112.0) Gecko/20100101 Firefox/112.0',
-        'Mozilla/5.0 (None; rv:113.0) Gecko/20100101 Firefox/113.0',
-        'Mozilla/5.0 (None; rv:114.0) Gecko/20100101 Firefox/114.0',
-    )
-
     random.seed(seed)
+
+    # firefox versions 103 - 127
+    version = float(random.randint(103, 127))
+    USER_AGENT = 'Mozilla/5.0 (NONE; rv:%.1f) Gecko/20100101 Firefox/%.1f' % (
+                version, version
+            )
 
     os_plat = random.choice(list(OS_PLATFORM.keys()))
     os_choice = random.choice(OS_PLATFORM[os_plat])
     cpu = random.choice(OS_CPU[os_plat])
 
     if os_plat == "win":
-        user_agent = random.choice(USER_AGENT).replace(
-                                                "None", f'{os_choice}; {cpu}'
-                                                )
+        user_agent = USER_AGENT.replace(
+                                        "NONE", f'{os_choice}; {cpu}'
+                                        )
     else:
-        user_agent = random.choice(USER_AGENT).replace(
-                                                "None", f'{os_choice}; {cpu}'
-                                                )
+        user_agent = USER_AGENT.replace(
+                                        "NONE", f'{os_choice}; {cpu}'
+                                        )
 
     return user_agent
